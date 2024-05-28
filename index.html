@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="parent">
+        <div class="container">
+            <img id="image" src="" alt="" height="100px" width="100px" style="object-fit: cover; border-radius: 50%;">
+            <h1 id="name"></h1>
+            <p id="description"></p>
+            <p id="ratting"></p>
+        </div>
+    </div>
+
+
+
+    <script>
+        let i = 0;
+        let image = document.getElementById("image");
+        let name = document.getElementById("name");
+        let description = document.getElementById("description");
+        let ratting = document.getElementById("ratting");
+        let data = [
+            {
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAcxKvNdS_m2u21A3f1eq6wnd7jBrabcfYDw&s",
+                name: "Md. Sakib",
+                description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, suscipit laudantium placeat dicta quas amet, voluptate delectus animi rerum architecto nihil nemo consequatur fugit. Adipisci, et commodi. Fuga ea, distinctio, aliquam, ab eaque totam rerum accusantium vel voluptatem magni nihil?",
+                ratting: "4.9"
+
+            },{
+                image: "data:image/jpeg;base64,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",
+                name: "Md. Rakib",
+                description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, suscipit laudantium placeat dicta quas amet, voluptate delectus animi rerum architecto nihil nemo consequatur fugit. Adipisci, et commodi. Fuga ea, distinctio, aliquam, ab eaque totam rerum accusantium vel voluptatem magni nihil?",
+                ratting: "4.9"
+            },{
+                image: "https://media.istockphoto.com/id/1388644810/photo/happy-caucasian-young-man-using-smart-phone-cellphone-for-calls-social-media-mobile.jpg?s=612x612&w=0&k=20&c=yDQ9bsnRb-diOKvUQDJ6pklSmiHE3-QmSP-L8FuL2vc=",
+                name: "Md. Zillur",
+                description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, suscipit laudantium placeat dicta quas amet, voluptate delectus animi rerum architecto nihil nemo consequatur fugit. Adipisci, et commodi. Fuga ea, distinctio, aliquam, ab eaque totam rerum accusantium vel voluptatem magni nihil?",
+                ratting: "4.9"
+            }];
+        setInterval(function(){
+            let item = data[i++];
+            image.src = item.image;
+            name.innerHTML = item.name;
+            description.innerHTML = item.description;
+            ratting.innerHTML = item.ratting;
+            if(data.length === i){
+                i = 0;
+            }
+        },1000)
+    </script>
+</body>
+</html>
